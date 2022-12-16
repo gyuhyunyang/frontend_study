@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 외부 스타일 시트(링크 방식) -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- 내부 스타일 시트(내장 방식) -->
+  <style>
+    div {
+      color: red;
+      margin: 20px;
+    }
+  </style>
+
+  <!-- 
+    CSS 선언방식에 따른 우선순위 (Cascading Order: 계단식 순서)
+    1순위: 인라인 스타일
+    2순위: 외부 또는 내부 스타일 시트
+    3순위: 브라우저 기본 스타일
+    동일한 우선순위에서 다른 스타일이 정의된 경우 마지막 스타일이 가장 높은 우선순위
+  -->
+</head>
+<body>
+  <!-- 인라인 스타일(인라인 방식) -->
+  <!-- 편리해 보이지만 우선순위가 제일 높아 스타일을 덮어쓸 수 없음 -->
+  <div style="color: green;" class="box">GONI</div>
+</body>
+</html>

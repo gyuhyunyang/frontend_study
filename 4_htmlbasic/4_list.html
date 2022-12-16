@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      color: red;
+    }
+
+    div {
+      color: red;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- unordered list(블록): 순서가 필요없는 목록 -->
+  <ul>
+    <!-- list item(블록): 목록 내의 각 항목 -->
+    <li>사과</li>
+    <li>딸기</li>
+    <li>수박</li>
+    <li>오렌지</li>
+  </ul>
+
+  <!-- ordered list(블록): 순서가 있는 목록 -->
+  <ol>
+    <!-- list item(블록): 목록 내의 각 항목 -->
+    <li>사과</li>
+    <li>딸기</li>
+    <li>수박</li>
+    <li>오렌지</li>
+  </ol>
+
+  <!-- anchor(인라인): 닻, 페이지 이동하는 하이퍼링크를 지정(닻을 내리는 것) -->
+  <!-- 인라인 요소라 수평 배열 -->
+  <!-- 
+    target 속성: 링크된 페이지를 어디에 표시할지 타겟 지정
+    _self: 현재 탭
+    _blank: 새로운 탭
+  -->
+  <a href="https://www.naver.com">NAVER</a>
+  <a href="https://www.google.com" target="_blank">Google</a>
+
+  <!-- span(인라인): 텍스트 구분을 위해 사용(주로 글자에 스타일 적용할때) -->
+  <p>
+    <span>동해물</span>과 백두산이 마르고 닳도록
+  </p>
+
+  <!-- div는 글자를 다루는데 적합하지 않음 -->
+  <p>
+    <div>동해물</div>과 백두산이 마르고 닳도록
+  </p>
+
+  <!-- break(인라인): 줄바꿈 -->
+  <p>
+    동해물과 백두산이<br> 마르고 닳도록
+  </p>
+
+  <!-- horizontal rule(블록): 수평줄 -->
+  <hr>
+
+  <!-- p, span, br -->
+  <p>
+    동해물과 백두산이 마르고 닳도록<br>
+    하느님이 보우하사 <span>우리나라</span> 만세
+  </p>
+</body>
+</html>

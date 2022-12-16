@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*     
+    @media 조건 {
+      조건에 맞을때 적용할 스타일
+    }   
+    */
+    /* 반응형 웹(화면의 너비에 따라 스타일이 변하는 웹)일 때는 조건에 screen */
+    /* 개발자 도구의 토글 디바이스로 확인 가능 */
+    /* 일반적으로 데스크탑, 테블릿, 모바일을 고려 */
+    /* 
+    일반적인 반응형 작업은 '기획자 > 디자이너 > 개발자' 순으로 넘어옴 
+    
+    주로 하는 작업들
+    1) 1행 2열 수평 구조를 2행 1열의 수직 구조로 변경하거나 중요하지 않은 정보는 과감히 생략 
+    2) 게시판이나 리스트형 목록의 경우 증요하지 않은 컬럼을 생략
+    3) 폰트 크기나 이미지 사이즈 등 콘텐츠의 크기는 모바일 화면에 맞춰서 작게 조절  
+    
+    */
+
+    /* 참고! 웹 페이지 안에 콘텐츠가 너무 많으면 오히려반응형 작업보다 모바일 웹 페이지를 따로 만드는게 나음
+       (예 : 관공서나 공공기관 홈페이지) */
+
+
+    /* 장치가 화면이며, 최대 너비가 300px 일때 */
+    /* ~ 300px 이하 */
+    @media screen and (max-width: 300px) {
+      
+      * {
+        color:skyblue
+      }
+      
+    }
+
+    /* 장치가 화면이며, 최소너비가 301px이고, 최대 너비가 500px 일때 */
+    /* 301px ~ 500px 사이 */
+    @media screen and (min-width: 301px) and (max-width: 500px) {
+      
+      * {
+        color:coral
+      }
+      
+    }
+
+    /* 장치가 화면이며, 최소너비가 501px 일때 */
+    /* ~ 501 px 이상 */
+    @media screen and (min-width: 501px) {
+      
+      * {
+        color:pink
+      }
+      
+    }
+
+
+
+   /* 일반적인 중단점(Break Point) */
+    /* 
+      1. 5개 기준 -> 중단점 4개 (매우 디테일)
+      ~ 479px : 모바일 세로
+      480px ~ 767px : 모바일 가로, 태블릿 세로
+      768px ~ 1023px : 태블릿 가로
+      1024px ~ 1279px : 노트북
+      1280px ~ : 데스크톱
+
+      2. 4개 기준 -> 중단점 3개 (디테일, Best)
+      ~ 479px : 모바일 세로
+      480px ~ 767px : 모바일 가로, 태블릿 세로
+      768px ~ 1023px : 태블릿 가로
+      1024px ~ : 데스크탑
+
+      3. 3개 기준 -> 중단점 2개 (일반적, Normal)
+      ~ 767px : 모바일
+      768px ~ 1023px : 태블릿
+      1024px ~ : 데스크탑
+
+      4. 2개 기준 -> 중단점 1개 (Hmm.., Worst)
+      ~ 767px : 모바일
+      768px ~ : 태블릿, 데스크탑
+    */
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi minima reprehenderit nemo similique? Consequuntur nisi reiciendis inventore excepturi magnam, sequi hic neque porro culpa corporis maiores? Temporibus soluta recusandae animi?</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus debitis voluptatem explicabo voluptatum laudantium ullam commodi! Dolorum consequuntur quasi, facere maxime molestiae placeat saepe ullam dicta similique maiores, optio iure.</p>
+ 
+</body>
+</html>

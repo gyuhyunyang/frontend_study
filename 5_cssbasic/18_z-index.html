@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 350px;
+            background-color: royalblue;
+            padding: 20px;
+            position: relative;
+        }
+        .child-1 {
+            width: 250px;
+            height: 150px;
+            background-color: orange;
+
+            position: relative;
+            z-index: 999;
+        }
+        .child-2 {
+            width: 350px;
+            height: 250px;
+            background-color: coral;
+
+            /* 원래 자신이 있던 위치 기준으로 배치*/
+            position: absolute;
+            top: 80px;
+            left : 100px;
+
+            z-index: 1;
+        }
+        .child-3 {
+            width: 250px;
+            height: 300px;
+            background-color: red;
+
+            position: absolute;
+            bottom: -80px;
+            right: -30px;
+
+            z-index: 2;
+        }
+
+
+        /* z-index 요소의 쌓임 순서를 지정, 숫자가 높으수록 위에 쌓임 */
+
+        /* position 속성의 값 (static 제외)이 있거나 Flex Items에서도 사용가능 */
+        /* 예) 슬라이드 메뉴, 드롭다운(콤보박스), 모달창, 백그라운드 비활성화 등에 사용*/
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child-1"></div>
+        <div class="child-2"></div>
+        <div class="child-3"></div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 조건문
+    // 조건식의 결과에 따라 다른코드를 실행(분기)하는 구문
+    // if문, switch문
+    
+    // if
+    // if (값 또는 조건식) { 실행코드 }
+    let isShow = true; // 참
+    const checked = false ; // 거짓
+
+    if(isShow) {
+      console.log('Show!');
+    }
+
+    if(checked) {
+      console.log('Checked!');
+    }
+
+
+
+    // if ~ else
+    isShow = false;
+
+    if(isShow) {
+      console.log('Show!');
+       
+    } else {
+      console.log('Checked!');
+    }
+
+
+    // if ~ else if ~ else
+    const score = 22;
+    if(score >= 90) {
+      console.log('A등급')
+    } else if(score >= 80) {
+      console.log('B등급')
+    } else if(score >= 70) {
+      console.log('C등급')    
+    } else {
+      console.log('D등급')    
+    }
+
+
+
+    // switch
+    const arr = [10, 20, 30];
+    switch (arr[5]) {
+      case 10:
+        console.log('10 입니다.')
+        break;// break 문을 안써주면 break문을 만날때까지 밑에 코드들이 설정됨
+      case 20:
+        console.log('20 입니다.')
+        break;
+      case 30:
+        console.log('30 입니다.')
+        break;    
+      default:// 모든 case에 매칭이 안되면 실행된 (옵션)
+      console.log('10, 20, 30 이외의 숫자입니다.')
+        break;
+    }
+
+
+    const os = 'linux';
+    switch (os) {
+      case 'window':
+        console.log('window입니다.')
+        break;
+        case 'linux':  
+        console.log('linux입니다.')
+        break;
+        case 'max':  
+        console.log('max입니다.')
+        break;
+    
+      default:
+        console.log('그 이의 운영체제 입니다.');
+        break;
+    }
+
+
+
+
+
+
+    // if와 switch 차이
+    // 1. 동작원리 2. case문에 복작합 연산식 사용불가
+    // 명확한 값이 떨어질때, switch를 쓰면 코드가 더 깔끔해짐(가독성) 
+
+
+
+
+
+
+
+
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 함수
+    // 기능(동작)을 수행하는 코드의 집합
+    // 변수와 마찬가지로 한번 선언해두고 재활용이 가능
+    
+    // 함수의 선언과 호출
+    // function키워드 함수이름(매개변수) { 실행블록 안에 실행코드 }
+    // 매개변수(옵션) : 외부로부터 받을 값(데이터)을 저장
+    // 실행블록 : 실행할 코드를 작성
+    
+    // 선언이 끝나면 필요한 곳에서 호출해서 사용
+    // 함수이름();
+    // 실행블록안에 여러 가지 코드가 한번에 실행됨
+
+    // 함수선언
+    function helloFunc(){
+      // 실행할 코드들
+      console.log(1234);
+    }
+
+    // 함수호출
+    helloFunc();
+    helloFunc();
+    helloFunc();
+
+
+    // 함수의 데이터 반환
+    // 내부에서 return 키워드를 사용하면 데이터를 반환하고 함수종료
+    // 예) 계산기의 덧셈 기능
+    function returnFunc(){
+      return 123; // 데이터를 반환하고 함수 종료
+      // return; // 함수종료
+      console.log('ABC'); // 실행되지 않음 
+    }
+
+    const a = returnFunc(); // 실행 결과 반환되는 값을 변수 a에 할당
+    console.log(a);
+
+    // 선언된 함수 재사용
+    // 유효한 범위 내에서 재사용 가능
+    function sum(num1, num2) { // num1, num2는 매개변수(Parameter)
+      // 매개변수를 사용하여 함수 외부로부터 값을 받음
+      return num1 + num2;
+      
+    }
+
+    // 재사용 가능!
+    const result1 = sum(1, 2); // 전달하는 값 1, 2를 인수(또는 인자값)라고 부름(Argument)
+    const result2 = sum(7, 12);
+    const result3 = sum(2, 12);
+
+    console.log(result1, result2, result3);
+
+
+    // 기명(이름이 있는) 함수와 익명(이름이 없는) 함수
+    // 일반적으로 함수에는 이름이 존재하지만 때로는 없을 수도 있음
+    // 함수는 그 자체가 하나의 값(데이터)으로 변수에 할당 가능 (변수의 이름 = 함수의 이름)
+
+    // 기명함수
+    // 함수 선언문
+    function hello() {
+      console.log('Hello')
+    }
+
+    hello();
+
+
+    // 익명 함수
+    // 함수 표현식
+    // 익명함수는 이름이 없기 때문에 변수에 할당하지 않으면 재사용 불가
+
+    const world = function() {
+      console.log('World');
+    }
+
+    world();
+
+    // 함수는 그 자체가 하나의 값(데이터)이라 함수를 호출할 때 인수로 사용 가능 => 콜백함수라 부름
+    function handler(){
+      console.log('Clicked');
+    }
+
+    document.body.addEventListener('click', handler); // 콜백함수
+
+    handler();
+    handler(); // 총 3번 재사용
+
+
+    // 함수를 재사용 할 필요가 없으면(1회성) 굳이 이름을 붙이지 않고 익명 함수 사용
+    document.body.addEventListener('click', function() 
+    { //콜백함수
+      console.log('익명함수')
+    });  // 1회성
+
+
+    // 메소드에 대해
+    // 객체에 저장하는 데이터가 함수인 경우, 그 속성을 메소드라 부름
+    // 자신이 속한 객체의 각 속성에 this라는 키워드로 접근이 가능
+
+    const user = {
+      // key : value
+      // 속성(property)
+
+      name : 'GYUHYUN YANG',
+      age : 99,
+      isValid : true,
+      getName : function () {
+        return this.name;
+      }
+    };
+    // 여기서 getName은 메소드이고 값으로 익명 함수 저장
+    // this는 객체 자기 자신을 가르킴
+
+    const hisName = user.getName(); // 메소드 호출
+    console.log(hisName);
+
+    //변수 할당 없이 바로 사용해도 됨 
+    console.log(user.getName());
+
+
+    // 차이점: 변수에 할당하면 함수(메소드) 호출 한번으로 해당 데이터를 재사용 가능
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

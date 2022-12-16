@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .flex-container {
+      display: flex;
+
+      /* 방법1 */
+      flex-direction: row;
+
+      /* 방법2 */
+      /* flex-wrap: wrap; */
+
+      font-size: 30px;
+      text-align: center;
+    }
+    .flex-item-left {
+      background-color: pink;
+      padding: 10px;
+      flex:50%;
+    }
+    .flex-item-right {
+      background-color: coral;
+      padding: 10px;
+      flex:50%;
+    }
+    .flex-item-first {
+      background-color: palegreen;
+      padding: 10px;
+      flex:1;
+    }
+    .flex-item-unimportant {
+      background-color: burlywood;
+      padding: 10px;
+      flex:1;
+    }
+    .flex-item-last {
+      background-color: skyblue;
+      padding: 10px;
+      flex:1;
+    }
+
+    /* 반응형 레이아웃 - 1열 레아웃만들기 */
+    /* ~ 800px 이하 */
+    @media screen and (max-width:800px){
+      /* 방법1 */          
+      .flex-container {
+        flex-direction: column;
+      } 
+
+      /* 방법2 */
+      /* .flex-item-left,
+      .flex-item-right {
+        flex: 100%;
+      } */
+
+      .flex-item-unimportant{
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Flexbox</h1>
+  <div class="flex-container">
+    <div class="flex-item-left">1</div>
+    <div class="flex-item-right">2</div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item-first">1</div>
+    <div class="flex-item-unimportant">2</div>
+    <div class="flex-item-last">3</div>
+  </div>
+
+
+
+  
+</body>
+</html>

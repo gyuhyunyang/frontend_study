@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 가상 클래스 선택자 */
+    /* :hover (마우스 커서가 올라가 있는 동안) */
+    /* a:hover {
+      color: red;
+    } */
+
+    /* :active (마우스를 클릭하고 있는 동안) */
+    /* a:active {
+      color: red;
+    } */
+
+    /* :focus (포커스[활성화] 되면) */
+    /* HTML 대화형(interactive) 요소에 사용 가능 */
+    /* input, a, button, label, select 등 */
+    input:focus {
+      background-color: orange;
+    }
+
+    /* :first-child (첫 번째 자식 요소) */
+    /* :last-child (마지막 자식 요소) */
+    /* .fruits span:first-child {
+      color: red;
+    } */
+
+    /* div가 3번째 자식이라 선택 안됨 */
+    /* .fruits div:first-child {
+      color: red;
+    } */
+
+    /* .fruits h3:last-child {
+      color: red;
+    } */
+
+    /* :nth-child(n) (n번째 자식 요소) */
+    /* .fruits *:nth-child(2) {
+      color: red;
+    } */
+
+    /* .fruits *:nth-child(2n) {
+      color: red;
+    } */
+
+    /* .fruits *:nth-child(2n+1) {
+      color: red;
+    } */
+
+    /* .fruits *:nth-child(n+2) {
+      color: red;
+    } */
+
+    /* :not(s) (선택자 s를 제외) */
+    .fruits *:not(span) {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://www.naver.com">NAVER</a>
+
+  <input type="text">
+
+  <div class="fruits">
+    <span>딸기</span>
+    <span>수박</span>
+    <div>오렌지</div>
+    <p>망고</p>
+    <h3>사과</h3>
+  </div>
+</body>
+</html>

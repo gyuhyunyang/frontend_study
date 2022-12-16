@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVER</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- css -->
+  <style>
+
+    * {
+      box-sizing: border-box;
+      outline: none;
+    }
+    body {
+      font-family: Dotum, 돋움, Helvetica, sans-serif;
+      background-color: #f5f6f7;
+    }
+    a { 
+      text-decoration: none;
+      color:#000;
+    }
+  
+    .top {
+      max-width: 768px;
+      height: 124px;
+      display: flex;      
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    h1 a{
+      width: 200px;
+      height: 40px;
+      display: block;
+      background-image: url(logo.png);            
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    #container {
+      max-width: 768px;
+      height: 996px;
+      margin: 0 auto;
+    }
+    .section-input{
+      width: 460px;
+      margin: 0 auto;
+    }
+    .input-group {
+      margin-bottom:20px;
+    }
+    .input-group label{
+      width: 100%;
+    }
+    .input-group span {
+      display: block;
+      margin-bottom: 5px;
+      color:#000;
+      font-weight: bold;
+    }
+    .input-group input,
+    .input-group select{
+      display: block;
+      width: 100%;
+      height: 45px;
+      border: 1px solid #cdcdcd;
+    }
+    .birth select {
+      margin: 0 5px;
+    }
+    
+    .input-group .flex {
+      display: flex;
+      align-content : space-between
+    }
+    
+    .input-group button{
+      background: #03c75a;
+      width: 100%;
+      height: 53px;
+      border: 1px solid #03c75a;
+      color:#fff;
+      font-size: 18px;
+      letter-spacing: -1px;
+    }
+    
+    #footer{
+      max-width: 768px;
+      height: 200px;
+      background-color: coral;
+    }
+    .bottom {
+      max-width: 768px;
+      height: 83px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <div id="header">
+    <div class="top">
+      <h1>
+        <a href="#">
+         
+        </a>
+      </h1>
+    </div>
+  </div>
+
+  <!-- 메인(컨테이너) 영역 -->
+  <div id="container">
+    <div class="section-input">
+
+      <div class="input-group">
+        <label for="id"><span>아이디</span></label>
+        <input type="text" name="" id="id">
+      </div>
+
+      <div class="input-group">
+        <label for="pw1"><span>비밀번호</span></label>
+        <input type="password" name="" id="pw1">
+      </div>
+
+      <div class="input-group">
+        <label for="pw2"><span>비밀번호 재확인</span></label>
+        <input type="password" name="" id="pw2">
+      </div>
+
+      <div class="input-group">
+        <label for="name"><span>이름</span></label>
+        <input type="text" name="" id="name">
+      </div>
+
+      <div class="input-group birth">
+        <label for="birthday"><span>생년월일</span></label>
+        <div class="flex">
+          <input type="text" name="" id="birthday" placeholder="년(4자)">
+          <select name="" id="gender">
+            <option>월</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+
+          </select>
+          <input type="text" name="" id="birthday" placeholder="일">
+        </div>
+
+      </div>
+
+      <div class="input-group">
+        <label for="gender"><span>성별</span></label>
+        <select name="" id="gender">
+          <option>성별</option>
+          <option>남자</option>
+          <option>여자</option>
+          <option>선택안함</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="email"><span>본인확인 이메일</span></label>
+        <input type="email" name="" id="email" placeholder="선택입력">
+      </div>
+
+      <div class="input-group">
+        <label for="tel"><span>휴대전화</span></label>
+        <select name="" id="tel">
+          <option>대한민국 +82</option>
+          <option>가나 +233</option>   
+          <option>가봉 +241</option>
+          <option>가이아나 +592</option>
+          <option>감비아 +220</option>
+        </select>
+
+        <div class="flex">
+          <input type="tel" name="" id="tel" placeholder="전화번호 입력">
+          <button>인증번호받기</button>
+        </div>
+
+        <input type="tel" name="" id="tel" placeholder="인증번호를 입력하세요.">
+
+      </div>   
+
+      <div class="input-group">
+        <button>가입하기</button>
+      </div>
+        
+    </div>
+  </div>
+
+  <!-- 푸터 영역 -->
+  <div id="footer">
+    <div class="bottom">
+      <div class="bt-menu">
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">책임의 한계와 법적고지</a></li>
+          <li><a href="#">회원정보 고객센터</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© NAVER Corp.</p>
+      </div>
+
+    </div>
+
+  </div>
+  
+</body>
+</html>

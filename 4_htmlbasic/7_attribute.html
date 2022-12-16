@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    #abc {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- title: 요소의 설명, 마우스 커서를 올리면 지정한 설명이 나타남 -->
+  <a href="https://naver.com" target="_blank" title="네이버로 이동">NAVER</a>
+
+  <br><br>
+
+  <!-- style: 요소에 직접 스타일 적용(인라인 스타일) -->
+  <span style="color: blue;">파란색 글자</span>
+
+  <br><br>
+
+  <!-- class: 요소를 지칭하는 중복 가능한 이름 -->
+  <!-- 선택자로 class를 사용하여 스타일 지정 또는 DOM 조작(추후 학습) -->
+  <span class="red">Lorem ipsum</span> dolor sit amet consectetur 
+  <span class="red">adipisicing elit.</span> Odio facere minus soluta.
+  <span class="red">Ullam, beatae.</span> Nihil aspernatur
+
+  <br><br>
+
+  <!-- id: 요소를 지칭하는 고유한 이름(웹 문서 한페이지에 한개만 존재) -->
+  <!-- 많이 사용 안함(특히 React에서는 사용 안함) -->
+  <!-- 고유하기 때문에 중요한 요소를 조금 더 쉽게 찾을 수 있음 -->
+  <span id="abc">Lorem ipsum</span> dolor sit amet consectetur 
+  <span class="red">adipisicing elit.</span> Odio facere minus soluta.
+  <span class="red">Ullam, beatae.</span> Nihil aspernatur
+
+  <br><br>
+
+  <!-- data: 요소에 데이터를 저장하는 용도(사용자 정의 속성을 만듦) -->
+  <!-- JS에서 이 속성으로 저장한 데이터를 이용 -->
+  <div data-fruit-name="apple">사과</div>
+  <div data-fruit-name="banana">바나나</div>
+
+  <script>
+    const elements = document.querySelectorAll('div');
+    elements.forEach(element => {
+      console.log(element.dataset.fruitName);
+    });
+  </script>
+</body>
+</html>

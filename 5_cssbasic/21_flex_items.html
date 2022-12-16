@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            background-color: pink;
+            display: flex;
+
+        }
+        .flex-container > div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size:30px;
+            background-color: skyblue;
+            line-height: 100px;
+        }
+        div.flex-container + div.flex-container {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>order : Flex Item의 순서</h1>
+    <h2>기본값 0, 음수 허용, 숫자가 작은것부터 큰 순서대로</h2>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="flex-container">
+        <div style="order: 17;">1</div>
+        <div style="order: -1">2</div>
+        <div style="order: 8;">3</div>
+        <div style="order: 100;">4</div>
+        <div style="order: 5;">5</div>
+    </div>
+
+    <h1>flex-grow: Flex Item의 증가 너비에 대한 비율</h1>
+    <h2>기본값 0, 단위 없음</h2>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container">
+        <div style="flex-grow: 1;">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container">
+        <div>1</div>
+        <div style="flex-grow: 2;">2</div>
+        <div style="flex-grow: 1;">3</div>
+    </div>
+
+
+
+    <h1>flex-shrink: Flex Item의  감소 너비에 대한 비율</h1>
+    <h2>기본값 1, 단위 없음</h2>
+    <h3>Flex Item은 기본적으로 정렬할 공간이 모자르면 너비가 자동으로 줄어듦 </h3>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="flex-container" style="width: 300px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="flex-container" style="width: 300px;">
+        <div style="flex-shrink: 0;">1</div>
+        <div style="flex-shrink: 0;">2</div>
+        <div style="flex-shrink: 0;">3</div>
+    </div>
+
+
+
+    <h1>flex-bass: Flex Item의  공간 배분 전 기본 너비</h1>
+    <h2>기본값 auto : 요소 내용의 너비를 기본 너비로 사용</h2>
+    <div class="flex-container">
+        <div style="flex-grow:1;">Have</div>
+        <div style="flex-grow:1;">a</div>
+        <div style="flex-grow:2;">Nice Day!</div>
+    </div>
+
+    
+    <h2>0인 경우 : 기본 너비 없음 => 요소의 크기가 비율로 쓰임</h2>
+    <div class="flex-container">
+        <div style="flex-grow:1; flex-basis: 0;">Have</div>
+        <div style="flex-grow:1; flex-basis: 0;">a</div>
+        <div style="flex-grow:2; flex-basis: 0;">Nice Day!</div>
+    </div>
+
+    <h2>200px인 경우 : 기본 너비를 200px로 사용</h2>
+    <div class="flex-container">
+        <div style="flex-grow:1; flex-basis: 200px;">Have</div>
+        <div style="flex-grow:1; flex-basis: 200px;">a</div>
+        <div style="flex-grow:2; flex-basis: 200px;">Nice Day!</div>
+    </div>
+
+    <!-- Tip -->
+    <h1>요소를 같은 비율로 나누기</h1>
+    <h2>flex : 1; flex: 1 1 0; 의 단축속성</h2>
+    <div class="flex-container">
+        <div style="flex: 1;">1</div>
+        <div style="flex: 1;">2</div>
+        <div style="flex: 1;">3</div>
+  
+    </div>
+    <h1>요소를 비율로 나누기</h1>
+    <h2>flex : n</h2>
+    <div class="flex-container">
+        <div style="flex: 3;">1</div>
+        <div>2</div>
+        <div style="flex: 5;">3</div>
+  
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 350px;
+            background-color: royalblue;
+            padding: 20px;
+        }
+        .child-1 {
+            width: 250px;
+            height: 150px;
+            background-color: orange;
+        }
+        .child-2 {
+            width: 350px;
+            height: 250px;
+            background-color: coral;
+
+            /* 원래 자신이 있던 위치 기준으로 배치*/
+            position: relative;
+            top: 50px;
+            left : 50px;
+        }
+        .child-3 {
+            width: 250px;
+            height: 300px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child-1"></div>
+        <div class="child-2"></div>
+        <div class="child-3"></div>
+    </div>
+
+    
+</body>
+</html>

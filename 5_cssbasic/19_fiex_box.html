@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 200px;
+            background-color: royalblue;
+        }
+        .child-1 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .child-2 {
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+        }
+        .child-3 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        /* 1번선택자 다음에 2번선택자가 나올때 사용가능함 다음에 얘가 나올때 사용가능함 */
+        .parent.d-flex + .parent.d-flex {
+            margin-top: 20px;
+        } 
+        .parent.d-inline-flex + .parent.d-inline-flex {
+            margin-left: 20px;
+        } 
+        .d-flex {
+            display: flex;
+        }
+        .d-inline-flex {
+            display: inline-flex;
+        }
+        .flex-row {
+            flex-direction: row;
+            /*디렉션*/
+        }
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+        .flex-column {
+            flex-direction: column;
+        }
+        .flex-column-reverse {
+            flex-direction: column-reverse;
+        }
+        </style>
+</head>
+<body>
+    <h1>display</h1>
+    <h2>flex : Flex Container를 블록 요소처럼 정의</h2>
+    <h2>inlne-flex: Flex Container를 인라인 요소처럼 정의</h2>
+
+    <!-- Flex Container : 정렬할 요소들의 묶음 -->
+    <div class="parent d-inline-flex">
+        <!-- Flex Items : 정렬할 요소들 -->
+        <div class="child-1"></div>
+        <div class="child-2"></div>
+        <div class="child-3"></div>
+    </div>
+
+
+    <div class="parent d-inline-flex">
+        <div class="child-1"></div>
+        <div class="child-2"></div>
+        <div class="child-3"></div>
+    </div>
+
+
+    <div class="parent d-inline-flex">
+        <div class="child-1"></div>
+        <div class="child-2"></div>
+        <div class="child-3"></div>
+    </div>
+
+    <h1>flex-directon</h1>
+    <h2>row: 좌에서 우로 정방향</h2>
+
+    <div class="parent d-flex flex-row">
+        <div class="child-1">1</div>
+        <div class="child-2">2</div>
+        <div class="child-3">3</div>
+    </div>
+
+ 
+    <h2>row-reverse: 우에서 좌로 역방향</h2>
+
+    <div class="parent d-flex flex-row-reverse">
+        <div class="child-1">1</div>
+        <div class="child-2">2</div>
+        <div class="child-3">3</div>
+    </div>
+
+
+    <h2>column: 위에서 아래로 정방향</h2>
+
+    <div class="parent d-flex flex-column">
+        <div class="child-1">1</div>
+        <div class="child-2">2</div>
+        <div class="child-3">3</div>
+    </div>
+
+
+    <h2>column-reverse: 우에서 좌로 역방향</h2>
+
+    <div class="parent d-flex flex-column-reverse">
+        <div class="child-1">1</div>
+        <div class="child-2">2</div>
+        <div class="child-3">3</div>
+    </div>
+
+
+    
+</body>
+</html>

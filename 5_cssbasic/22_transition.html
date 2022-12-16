@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{ 
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+
+        }
+        div + div {
+            margin-top: 20px;
+        }
+        
+        .transition-1{
+            transition: width 2s, height 4s linear 2s;
+        }
+        .transition-1:hover {
+            width: 300px;
+            height: 300px;
+            
+        }
+        .transition-2{
+            transition: width 2s cubic-bezier(.93,.1,.13,.66) 5s;
+        }
+        .transition-2:hover {
+            width: 300px;
+            height: 300px;       
+        }
+
+        .transition-3{
+           position: relative;
+           left: 0;
+
+           transition: left 2s;
+        }
+        .transition-3:active {
+            left: 300px; 
+        }
+
+
+        </style>
+</head>
+<body>
+    <h1>transition  단축 속성</h1>
+    <div class="transition-1"></div>
+    <div class="transition-2"></div>
+    <div class="transition-3"></div>
+    
+</body>
+</html>

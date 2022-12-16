@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+
+            /* 영역까지 사라짐 display: none; */
+
+            /* 영역은 차지함, 보여지는 것만 안보임 visibilty : hidden */
+        
+
+            /* 0~1 사이의 소수를 사용하여 투명도를 지정 */
+            opacity: 0.5;
+        }
+        </style>
+        <script>
+            function showModal() {
+                document.getElementById("modal").style.display = "block";
+            }
+
+            function hideModal() {
+                document.getElementById("modal").style.display = "none";
+            }
+        </script>
+</head>
+<body>
+    <!-- display 요소의 화면 출력(보여짐) 특성 -->
+    <!-- 각 요소에 이미 지정되어 있고 수정 가능 : block, inline, inline-block 등 --> 
+    <div id="modal"></div>
+
+    <!-- 예: 슬라이드 메뉴나 모달창 등에 사용 -->
+    <button type="button" onclick="showModal()">열기</button>
+    <button type="button" onclick="hideModal()">닫기</button>
+</body>
+</html>

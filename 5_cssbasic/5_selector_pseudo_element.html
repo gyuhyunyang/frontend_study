@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 가상 요소 선택자: HTML에 가상의 요소를 생성 또는 삽입 가능 */
+    /* 반드시 CSS의 content 속성과 같이 사용 */
+    /* ::before (요소의 내부 앞에 내용 삽입) */
+    .box::before {
+      content: "앞!";
+    }
+    
+    /* ::after (요소의 내부 뒤에 내용 삽입) */
+    .box::after {
+      content: "뒤!";
+    }
+
+    /* 가상 요소는 인라인 요소(글자) */
+  </style>
+</head>
+<body>
+  <div class="box">
+    Content!
+  </div>
+</body>
+</html>

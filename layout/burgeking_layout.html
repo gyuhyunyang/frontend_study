@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버거킹</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <style>
+    /* 공통스타일 */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 헤더 */
+    header {
+      width: 100%; 
+      background-color: coral;
+      position: fixed;
+    }
+    .inner {
+
+      /* 1100px 이상 늘어나지 않음 */
+      max-width: 1100px;
+      height: 120px;
+      margin: 0 auto;
+      background-color: antiquewhite;
+      display: flex;
+
+    }
+    .inner > nav {
+
+      /* width: calc(100% - 268px); */
+      
+      flex-grow: 1;
+      background-color: palevioletred;
+    }
+    .inner > nav > ul{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .inner > .delivery-order {
+      width: 168px;
+      background-color: skyblue;
+    }
+
+    /* 메인 */
+    main{
+      max-width: 1440px;
+      margin: 0 auto;
+          
+    }
+    .slider__content{
+      height: 400px;
+      background-color: teal;
+    }
+    .youtube__content{
+      height: 605px;
+      background-color: darkolivegreen
+    }
+    .sns__content {
+      height: 160px;
+      background-color: aquamarine
+    }
+    .sns__content > ul {
+      display: flex;
+    }
+    .sns__content > ul > li{
+      flex: 1;
+      text-align: center;
+    }
+    .guide__content {
+      height: 480px;
+      background-color: coral;
+    }
+    .guide__content {
+      display: flex;
+      
+    }
+    .guide__content > div {
+      flex: 1;
+      text-align:center;
+    }
+    .guide__content > .content__app{ 
+      background-color: plum;
+    }
+    .guide__content > .content__delivery {
+      background-color: blueviolet;      
+    }
+    .store__content {
+      height: 597px;
+      background-color: burlywood;
+    }
+    .store__content ul {
+      width: 80%;
+      margin: 0 auto;     
+    }
+    .store__content ul > li {
+      float:left;
+      width:16.6666%;
+      text-align:center;
+    }
+    .banner__content{
+      height: 200px;
+      background-color: #ddd;
+    }
+    footer{
+      width: 100%;
+      height: 680px;
+      background-color: darkorange;
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <h1>
+        로고자리
+      </h1>
+      <nav>
+        <ul>
+          <li>메뉴소개</li>
+          <li>매장소개</li>
+          <li>이벤트</li>
+          <li>브랜드스토리</li>
+        </ul>
+      </nav>
+      <div class="delivery-order">
+        딜리버리 주문
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="slide">
+      <div class="slider__content">
+        슬라이드 이미지 자리
+      </div>      
+    </section>
+    <section class="youtube">
+      <div class="youtube__content">
+        유튜브 영상 자리
+      </div>
+    </section>
+    <section class="sns">
+      <div class="sns__content">
+        <ul>
+          <li>youtube</li>
+          <li>facebook</li>
+          <li>instagram</li>
+        </ul>
+      </div>
+    </section>
+    <section class="guide">
+      <div class="guide__content">
+        <div class="content__app">
+          app      
+  
+        </div>
+        <div class="content__delivery">
+          delivery
+        </div>
+      </div>
+
+    </section>
+    <section class="store">
+      <div class="store__content">
+        <div>
+          매장찾기
+        </div>
+        <ul>
+          <li>딜리버리</li>
+          <li>킹오더</li>
+          <li>드라이브 스루</li>
+          <li>24시간</li>
+          <li>아침메뉴</li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="banner">
+      <div class="banner__content">
+        배너자리
+      </div>
+
+    </section>
+
+    
+    
+
+  </main>
+  <footer>
+    푸터영역
+
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 {
+            width: 800px;
+            height: 500px;
+            background-color: orange;
+            background-image: url("images/logo_resize.png"); 
+            
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            /* background-repeat: no-repeat;*/
+
+            /* 방향을 입력 : 순서 상관없음 */
+            /* background-position: top right; */
+            /* background-position: center; */
+
+            /* 단위를 입력 : 왼쪽에서의 거리, 위에서의 거리
+            background-position: 100px 300px; */
+
+
+
+             /* 단위를 입력 : 가로 길이, 세로길이
+            background-size: 100px 300px; */
+
+
+            /* background-size: cover; 비율을 유지, 더 넓은 너비에 가득 덮음
+            background-size: contain; 비율을 유지, 더 짧은 너비에 포함시킴 */
+
+
+        }
+
+
+        .fixed-bg{
+            min-height: 600px;
+            background-color: pink;
+            background-image: url("images/logo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        .container-2 {
+            height: 800px;
+            background-color: yellow;
+        }
+        </style>
+</head>
+<body>
+    <div class="container-1">
+        <p> fixed :   배경이미지가 뷰포트에 고정, 스크롤 되지 않음 </p>
+        <div class="fixed-bg"></div>
+        <div class="container-2"> 스크롤링을 하기 위한 800px의 높이를 갖는 div영역 </div>
+
+    </div>
+    
+</body>
+</html>

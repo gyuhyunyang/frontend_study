@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
+</head>
+<body>
+  <script>
+    // 데이터 타입(자료형)
+
+    // String(문자 데이터)
+    // 큰따옴표(""), 작은따옴표(''), 백틱(``) 작은따옴표 선호
+
+    const myName = "GYUHYUN YANG";
+    const email = 'ygh0424@naver.com';
+    const hello = `Hello ${myName}?!`; // 템플릿 리터럴 (ES6차)
+
+    const concatString = 'Hello' + myName + '?!';
+    const multiline = `Hello
+    javascript
+    world`
+
+    //백틱은 줄바꿈 상관없음
+
+    console.log(myName);
+    console.log(email);
+    console.log(hello);
+    console.log(concatString);
+    console.log(multiline);
+
+
+
+    // Number (숫자 데이터)
+    // 정수 및 부동소수점 숫자를 나타냄
+
+    const number = 123;
+    const opacity = 0.57;
+
+    console.log(number);
+    console.log(opacity);
+
+
+    // Boolean(논리 데이터) 블린, 블리언
+    // true(참). false(거짓) 두 가지 값만 존재
+    // 이분법적으로 구분해야 하는 상황에서 사용 => 주로 조건문/반목문에서 조건을 판단할 때
+
+
+    let checked = true;
+    let isShow = false;
+
+    console.log(checked);
+    console.log(isShow);
+
+
+    // undefined
+    // 아무것도 정의되지 않은(값이 할당되지 않은) 상태를 의미
+    // 초기화(값을 넣는 행위)를 하지 않으면 자동으로 undefined가 할당
+
+    let undef;
+    const obj = { abc: 123 };
+
+    console.log(undef);
+    console.log(obj.abc);
+    console.log(obj.xyz);
+
+
+    // null
+    // 어떤 값이 의도적으로 비어있음을 의미
+    // undefined와 다른 점은 개발자가 명시적으로 값이 비어있음을 나타낼 때 사용
+    // 다른 데이터가 할당될 수 있음을 전제
+     
+    let name = null;
+    console.log(name);
+
+    name = 'GYUHYUN YANG'
+    console.log(name);
+
+
+
+    // Object(객체 데이터)
+    // 여러 데이터를 key-value 1쌍의 형태로 지정
+    // 다양한 방식으로 선언 가능한데 {} 방식이 주로 사용
+
+    const user = {
+      // key : value
+      // 속성(property)
+
+      name : 'GYUHYUN YANG',
+      age : 99,
+      isValid : true
+
+    };
+
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.isValid);
+
+
+    // Array (배열 데이터)에어리
+    // 여러 데이터를 순차적으로 저장, [] 방식을 사용
+    // 배열의 인덱스는 0부터 시작
+    const fruits = ['Apple', 'Banana', 'Cherry'];
+
+     
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[2]);
+
+    // 다른 종류의 데이터를 포함시킬 수도 있지만, 대부분 같은 종류의 뎅터를 나열
+
+    const arr = ['ABC', 99, true];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+
+
+
+     
+
+
+
+
+
+
+
+
+  </script>
+
+  
+  
+</body>
+</html>
