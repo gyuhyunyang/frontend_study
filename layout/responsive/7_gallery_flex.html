@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    div.inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: coral;
+      padding: 10px;
+    }
+    .gallery h1 {
+      text-align: center;      
+    }
+    .gallery .img-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      width: calc(25% - 8px);
+    }
+
+    @media screen and (min-width: 768px) and (max-width:960px) {
+      .gallery img {
+        width: calc(33% - 6px);
+      }      
+    }
+    @media screen and (min-width: 480px) and (max-width:767px) {
+      .gallery img {
+        width: calc(50% - 6px);
+      }      
+    }
+    @media screen and (max-width: 478px) {
+      .gallery img {
+        width:100%;
+      }      
+    }
+  </style>
+</head>
+<body>
+  <section class="gallery">
+    <div class="inner">
+      <h1>갤러리</h1>
+      <div class="img-group">
+        <img src="http://via.placeholder.com/1024x768" alt="img1">
+        <img src="http://via.placeholder.com/1024x768" alt="img2">
+        <img src="http://via.placeholder.com/1024x768" alt="img3">
+        <img src="http://via.placeholder.com/1024x768" alt="img4">
+        <img src="http://via.placeholder.com/1024x768" alt="img5">
+        <img src="http://via.placeholder.com/1024x768" alt="img6">
+        <img src="http://via.placeholder.com/1024x768" alt="img7">
+        <img src="http://via.placeholder.com/1024x768" alt="img8">
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
