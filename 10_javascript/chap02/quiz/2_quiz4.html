@@ -14,30 +14,36 @@
   // 적정 평균 체중 오차는 +-5이며 방문자가 입력한 체중이 적정 체중일 경우에는 'OOO님은 적정 체중입니다.'를,
   // 아닐 경우에는 'OOO님은 적정 체중이 아닙니다.'를 화면에 출력하세요.
 
-	// 평균 체중 = (키 - 100) * 0.9
+  // 평균 체중 = (키 - 100) * 0.9
 
   // const name = prompt("당신의 이름은?", "");
-	// const height = prompt("당신의 신장은?", "0");
-	// const weight = prompt("당신의 몸무게는?", "0");
+  // const height = prompt("당신의 신장은?", "0");
+  // const weight = prompt("당신의 몸무게는?", "0");
 
 
   // 4번 풀이
 
+  // const name = prompt("당신의 이름은?", "");
+  // const height = Number(prompt("당신의 신장은?", "0"));
+  // const weight = Number(prompt("당신의 몸무게는?", "0"));
+
+  // let a;
+  // a = (height -  100) * 0.9
+
+
+  // result = weight <= a >= 1000 ? `${name}님은 적정 체중입니다.` : `${name}님은 적정 체중이 아닙니다.`;
+  // document.write(result);
+
+
   const name = prompt("당신의 이름은?", "");
-	const height = prompt("당신의 신장은?", "");
-	const weight = prompt("당신의 몸무게는?", "");
+  const height = Number(prompt("당신의 신장은?", "0"));
+  const weight = Number(prompt("당신의 몸무게는?", "0"));
 
-  
-  let a;
-  a = (height - 100) * 0.9;
-
-
-    
-    
-    // name'님은 적정 체중입니다.' : name'님은 적정 체중이 아닙니다.'
-
-    // result = Number(number) % 2 === 0 ? '짝수' : '홀수';
-
+  const normalWeight = (height -  100) * 0.9;
+  let result = (weight >= normalWeight - 5) && (weight <= normalWeight+5);
+  result = result ? '적정 체중입니다.' : '적정 체중이 아닙니다.';
+  document.write('평균 체중은 ' + normalWeight, '<br>');
+  document.write(name + '님은 ' + result);
 
 
 
