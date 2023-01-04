@@ -13,6 +13,19 @@
     // 풀이7
     let num = 1;
     let html = "<table border='1'>";
+  
+    for (let i = i; i <= 5; i++) {
+      html += '<tr>';
+      for (let j = 1; j <=5; j++) {
+        html += '<td>' + num + '</td>';
+        num++;
+      }
+        html += '</tr>';
+    }
+    html += '</table>';
+    document.write(html);
+
+
 
   </script>
 </head>

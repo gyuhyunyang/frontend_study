@@ -8,31 +8,31 @@
   <script>
     // 문제6
     // switch문을 사용하여 과목을 입력 받고 과목에 따라 과목코드를 출력하세요.
-    // (수학: 01, 영어:02, 국어: 03, 국사:04, 기타:00)
+    // (수학: 01, 영어:02, 국어: 03, 국사:04, 그외:00)
 
     // 풀이6
     const subject = prompt('과목 입력', '');
     let code;
 
     switch (subject) {
-      case 수학:
-        code = document.write('01');        
+      case '수학':
+        code = '01';      
         break;
-      case 영어:
-        code = document.write('02');             
+      case '영어':
+        code = '02';
         break;
-      case 국어:
-        code = document.write('03');           
+      case '국어':
+        code = '03'
         break;
-      case 국사:
-        code = document.write('04');              
-        break;
-      case 기타:
-        code = document.write('05');             
+      case '국사':
+        code = '04'    
         break;
       default:
+        code = '00';
         break;
     }
+
+    document.write('과목코드 : ' + code);
 
 
 
