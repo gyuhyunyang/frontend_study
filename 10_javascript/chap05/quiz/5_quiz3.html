@@ -14,27 +14,46 @@
 
 
     // 풀이3
+    
+    // 한글로 풀이(플로우차트를 글로적기)
+    // 1) 함수 printNumbers(from, to) 선언하기
+    // 2) 1초 간격으로(setInterval(f, 1000)) from값으로 출력시키기
+    // 3) from 값을 1씩 증가시키기(+ 1, ++)
+    // 4) to 값 까지만(조건 : from === to, from >= to)  출력하고 멈추기(claerInterval())
+
+    // function printNumbers(from, to){
+    //   let i = from;
+      
+    //   let timer = setInterval(function(){
+    //     i++;
+
+    //     if( i === to) {
+    //       clearInterval(timer);         
+    //     }            
+    //     console.log(i);
+    //   }, 1000);
+
+      
+      
+    // } 
+
     function printNumbers(from, to){
-      let i = from;
-
-      let timer = setInterval(function(){
-        if( i === to) {
-          // clearInterval(timer);
-        }        
+      const timerId = setInterval(function(){
+        document.write(from);
+        if(from >= to) {
+          clearInterval(timerId);
+        }
+        from++;
       }, 1000);
-
-      i++;
-
-    } 
+    }
 
     printNumbers(5, 10);
 
-    // console.log(timer);
-    document.write(timer);
 
+    
 
+    
 
- 
   </script>
 </head>
 <body>
