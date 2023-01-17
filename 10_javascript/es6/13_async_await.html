@@ -196,18 +196,16 @@
       
     // 1. 가장 먼저 해야될 것 : async 함수 만들기
 
-    async (id, password) => {
-      
-
-    }
-
-
-    
-
-
-
-
-
+    const loginAndGetRoles = async (id, password) => {
+      try {
+        const userId = await loginUser(id, password);
+        const userInfo = await getRoles(userId);
+        alert(`Welcome ${userInfo.name} (${userInfo.role})`);
+      } catch {
+        console.error(err);
+      }   
+    };
+    loginAndGetRoles();
 
 
   </script>
