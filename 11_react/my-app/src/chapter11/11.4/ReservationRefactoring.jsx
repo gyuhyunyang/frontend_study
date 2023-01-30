@@ -9,7 +9,7 @@ function ReservationRefactoring() {
     name: ''
   });
 
-  const { breakfast, numberOfGuests } = inputs; // 구조 분해 할당을 통해 값 추출
+  const { breakfast, numberOfGuests, name } = inputs; // 구조 분해 할당을 통해 값 추출
 
   const handleInputChange = (e) => {
     const { type, name, checked, value } = e.target; 
@@ -19,6 +19,7 @@ function ReservationRefactoring() {
     // 중요!!
     // React 상태에서 객체를 수정해야 할 떄에는 
     // inputs[breakfast] = inputValue;
+    // setInputs(inputs);
     // 이런식으로 직접 수정하면 안됨(inputs가 가르키는 객체의 내부 데이터만 바뀐것이지 참조값은 변하지 않음)
     // 그 대신 새로운 객체를 만들어서 새로운 객체에 변화를 주고 이를 상태로 사용해야 함
     // 이런 작업을 "불변성을 지킨다" 라고 부름
@@ -45,7 +46,7 @@ function ReservationRefactoring() {
   };
 
   const handleSubmit = () => {
-    alert(`조식여부: ${breakfast}, 투숙객 수: ${numberOfGuests}`);
+    alert(`조식여부: ${breakfast}, 투숙객 수: ${numberOfGuests}, 이름: ${name}`);
   };
 
   return (  
@@ -67,6 +68,16 @@ function ReservationRefactoring() {
           type="number"
           name="numberOfGuests"
           value={numberOfGuests}
+          onChange={handleInputChange}
+          />
+      </label>
+      <br />
+      <label>
+        이름:
+        <input 
+          type="text"
+          name="name"
+          value={name}
           onChange={handleInputChange}
           />
       </label>

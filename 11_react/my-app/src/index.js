@@ -36,6 +36,7 @@ import NameForm from './chapter11/11.2/NameForm';
 import EssayForm from './chapter11/11.3/EssayForm';
 import FlavorForm from './chapter11/11.3/FlavorForm';
 import FileInput from './chapter11/11.3/FileInput';
+import SignUp from './chapter11/11.4/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -114,7 +115,8 @@ root.render(
   // <NameForm />
   // <EssayForm />
   // <FlavorForm />
-  <FileInput />
+  // <FileInput />
+  <SignUp />
 );
 
 // If you want to start measuring performance in your app, pass a function
