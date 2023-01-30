@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+// [문항1] 
+// 다음 중 자바스크립트에서 false로 취급되는 값(falsy)이 아닌 것은?
+
+// 1) NaN
+// 2) 1
+// 3) ""
+// 4) 0
+// 5) undefined
+
+
+// [답안]
+// 2
+
+
+
+
+
+// [문항2]
+//  Short-circuit evaluation 문제
+// 보기에 주어진 ff 변수를 출력 시 그 결과를 작성하세요.
+
+// let aa;
+// let bb = null;
+// let cc = undefined;
+// let dd = 4;
+// let ee = 'five';
+// let ff = aa || bb || cc || dd || ee;
+
+  // console.log(ff);
+
+
+// [답안]
+// 4
+
+
+
+    // [문항3] 
+
+    // prompt를 이용하여 이름을 입력받고 빈 문자가 들어오진 않았는지 유효성 검사를 진행하세요.
+    // 조건문을 사용하여 빈 문자가 아닌 값이 들어왔을 때만
+    // 입력 받은 이름과 함께 '님 환영합니다!' 라는 환영 문구를 출력하세요.
+
+    // const name = prompt('이름을 입력하세요.','');
+
+    // if ( 0 < name.length ) {
+    //   alert(`${name}님 환영합니다.`);
+    // } 
+
+
+    // [문항4] 
+    // 반복문을 사용하여 1~100까지 짝수의 합을 구하는 코드를 작성 후 출력해보세요.
+
+    // let sum = 0;
+    // for (let i = 1; i <= 100; i++) {
+    //   sum += i;      
+    // }
+    // console.log(sum);
+
+
+    // [문항5] 
+    // 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력해보세요.
+    // 이중 for문 사용
+
+    // [출력 결과]
+    // [1, 5]
+    // [2, 4]
+    // [3, 3]
+    // [4, 2]
+    // [5, 1]
+
+
+    // [답안]
+
+    // for (let i = 1; i <= 6; i++) {
+    //   for (let j = 1; j <= 6; j++) {
+    //     if(i+j==6) {
+    //       document.write(`${i},${j} <br>`);      
+          
+    //     }    
+    //   };
+    // };
+
+
+ 
+
+    // [문항6] 
+    // 보기와 같이 주어진 파일이름에서 확장자를 추출하여 출력해보세요.
+    // 추출 결과: jpg
+
+
+    // [답안]
+    // const fileName = 'cat_dog.tmp.jpg';
+    // document.write(fileName.substr(12, 3)); 
+
+
+    // [문항7] 
+    // 보기와 같이 친구들에게 갚아야 할 돈을 배열로 만들어놨는데 실수로 0을 하나 더 붙였다.
+    // 이대로 이체하면 거지가되니 빨리 0한자리를 뺀 새로운 배열을 다시 만든 후 출력해보세요.
+    // 배열의 map() 함수 사용
+
+
+    // [답안]
+    // const moneyList = [2000000, 240000, 3000000, 1500];
+    // const newMoneyList = moneyList.map((num) => {
+    //   return num / 10;
+    // });
+
+    // console.log(newMoneyList);
+
+ 
+
+
+
+
+// [문항8] 
+// 보기에 주어진 회원 데이터를 기준으로
+// 입력받은 id에 해당하는 멤버를 삭제한 새로운 배열을 만들어
+// 그 결과를 리턴하는 함수 deleteMember()를 만들어보세요.
+// 배열의 filter() 함수 사용
+
+// deleteMember('a3'); 호출 시 출력 결과는 아래와 같습니다.
+// [
+// { id: 'a1', name: 'Goni', age: 36 },
+// { id: 'a2', name: 'Pony', age: 32 },
+// { id: 'a4', name: 'Moly', age: 24 },
+// { id: 'a5', name: 'Noni', age: 45 }
+// ]
+// const members = [
+//   { id: 'a1', name: 'Goni', age: 36 },
+//   { id: 'a2', name: 'Pony', age: 32 },
+//   { id: 'a3', name: 'Tony', age: 12 },
+//   { id: 'a4', name: 'Moly', age: 24 },
+//   { id: 'a5', name: 'Noni', age: 45 }
+// ];
+
+
+// [답안]
+
+
+
+
+
+// [문항9] 
+// 보기에 주어진 객체의 복사본을 만들어서 키(height) 속성을 추가한 뒤 출력해보세요.
+// 키(height) 속성의 값은 number 타입으로 자유 입력
+// 스프레드(Spread) 연산자 사용
+
+
+// [답안]
+// const userInfo = {
+//   name: 'Goni Kim',
+//   age: 30
+// };
+
+// const clone = {...userInfo};
+// clone.height = 164;
+
+// console.log(clone);
+
+
+
+
+
+
+
+
+
+// [문항10]
+//  MZ세대들과 친해지기 위해 줄임말을 배우려고 한다.
+// 줄임말을 연습하기 위해 아래와 같이 어떤 입력이 주어지면 앞 글자만 줄여 출력하도록 만드세요.
+// (prompt를 사용하여 입력받기)
+
+// [실행 예시]
+// 입력: 오늘 저녁 치킨 고
+// 출력: 오저치고
+
+// const msg = prompt('메세지를 입력하세요.', '');
+// msg.
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

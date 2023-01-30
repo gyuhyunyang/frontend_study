@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 function TextInputWithFocusButton() {
   const inputEl = useRef(null);
-  console.log(inputEl);  // 일반 적인 자바스크립트 객체를 리턴함
+  console.log(inputEl); // 일반적인 자바스크립트 객체를 리턴함
 
   // 마운트 됐을 때 실행되므로 input 엘리먼트가 나옴
   useEffect(() => {
@@ -16,18 +16,16 @@ function TextInputWithFocusButton() {
 
   const onButtonClick = () => {
     // 여기서 current는 마운트 된 text input을 가리킴
-    inputEl.current.focus(); // 실제 엘리먼트에 접근하며 focus() 함수를 호출
+    inputEl.current.focus(); // 실제 엘리먼트에 접근하여 focus() 함수를 호출
   };
 
-  return (
+  return (  
     <>
-    {/* ref  속성에 inputEl을 넣어주기만 하면 해당 DOM에 접근 가능 */}
-    {/* 마치 document.querySelector()와 같음 */}
-    <input type="text" />
-    <button onClick={onButtonClick}>Focus the input</button>
-
+      {/* ref 속성에 inputEl을 넣어주기만 하면 해당 DOM에 접근 가능 */}
+      {/* 마치 document.querySelector()와 같음 */}
+      <input ref={inputEl} type="text" />
+      <button onClick={onButtonClick}>Focus the input</button>
     </>
-
   );
 }
 

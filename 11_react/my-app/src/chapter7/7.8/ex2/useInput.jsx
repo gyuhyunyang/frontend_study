@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function useInput(initialValue) {
   const [inputValue, setInputValue] = useState(initialValue);
 
@@ -5,9 +7,17 @@ function useInput(initialValue) {
     setInputValue(e.target.value);
   };
 
+  // const handleSubmit = () => {
+  //   alert(inputValue);
+  //   setInputValue('');
+  // };
 
-  return [inputValue, handleChange];
-  
+  const reset = () => {
+    setInputValue('');
+  };
+
+  // return [inputValue, handleChange, handleSubmit];
+  return [inputValue, handleChange, reset];
 }
 
 export default useInput;

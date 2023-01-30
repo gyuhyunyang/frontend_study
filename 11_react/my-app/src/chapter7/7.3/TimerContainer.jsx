@@ -3,16 +3,17 @@ import Timer from "./Timer";
 
 function TimerContainer() {
   const [showTimer, setShowTimer] = useState(false);
-  return (
+  
+  return (  
     <div>
-      {showTimer && <Timer/>}
-      <button
-        onClick={()=> setShowTimer(!showTimer)}
-        >
-          On/Off 토글
+      {showTimer && <Timer />}
+      <button 
+        onClick={() => setShowTimer(!showTimer)}
+      >
+        On/Off 토글
       </button>
     </div>
   );
 }
- 
+
 export default TimerContainer;
