@@ -37,6 +37,11 @@ import EssayForm from './chapter11/11.3/EssayForm';
 import FlavorForm from './chapter11/11.3/FlavorForm';
 import FileInput from './chapter11/11.3/FileInput';
 import SignUp from './chapter11/11.4/SignUp';
+import Calculator from './chapter12/Calculator';
+import WelcomeDialog from './chapter13/13.1.1.1/WelcomeDialog';
+import SplitPaneSection from './chapter13/13.1.1.2/SplitPaneSection';
+import DialogContainer from './chapter13/13.1.2/DialogContainer';
+import SignUpDialog from './chapter13/13.1.3/SignUpDialog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -111,13 +116,30 @@ const numbers = [1, 2, 3, 4, 5];
 // );
 
 // 11장 예제
-root.render(
+// root.render(
   // <NameForm />
   // <EssayForm />
   // <FlavorForm />
   // <FileInput />
-  <SignUp />
+//   <SignUp />
+// );
+
+// 12장 예제
+// root.render(
+
+  // <Calculator />
+ 
+// );
+
+
+// 13장 예제
+root.render(
+  // <WelcomeDialog />
+  // <SplitPaneSection />
+  // <DialogContainer />
+  // <SignUpDialog />
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
