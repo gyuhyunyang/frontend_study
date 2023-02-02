@@ -45,6 +45,7 @@ import SignUpDialog from './chapter13/13.1.3/SignUpDialog';
 import ProfileCard from './chapter13/ProfileCard';
 import DarkOrLight from './chapter14/14.4/DarkOrLight';
 import StyledPage from './chapter15/StyledPage';
+import SimpleRouter from './chapter16/SimpleRouter';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -154,11 +155,19 @@ const numbers = [1, 2, 3, 4, 5];
 
 
 // 15장 예제
+// root.render(
+//   // <StyledPage />
+  
+
+// );
+
+// 15장 예제
 root.render(
-  // <StyledPage />
+  <SimpleRouter />
   
 
 );
+
 
 
 
