@@ -13,6 +13,7 @@ import yonexImg from "../images/yonex.jpg";
 import data from "../data.json";
 import ProductListItem from '../components/ProductListItem';
 import { getProducts } from '../api/productAPI';
+import LatestView from '../components/LatestView';
 
 const MainBackground = styled.div`
   height: 500px;
@@ -116,9 +117,9 @@ function Main(props) {
           >
             더보기 {status}
         </Button>
-
-
       </section>
+
+      <LatestView />
 
     </>
   );

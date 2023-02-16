@@ -29,7 +29,14 @@ const GlobalStyle = createGlobalStyle`
   .cursor-pointer {
     cursor: pointer;
   }
+  .text-ellipsis {
+    white-space:nowrap ; // 감싸지 않겠다.
+    overflow: hidden; // 넘어간 부분 자르기
+    text-overflow: ellipsis; // 넘어간 텍스트를 어떻게 처리할지
+  }
+
   `;
+
 
 function App() {
   return (
